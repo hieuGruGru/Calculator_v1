@@ -25,6 +25,10 @@ public class Operators {
         return a % b;
     }
 
+    public static double Factorial (double a) {
+        return 1;
+    }
+
     public static boolean isOperator (char a) {
         if(a == '+' || a == '-'  ||
                 a == '*' || a == '.'  ||
@@ -41,7 +45,7 @@ public class Operators {
             return false;
         if (op1 == '^')
             return false;
-        if ((op1 == '*' || op1 == '/' || op1 == '.' || op1 == ':') && (op2 == '+' || op2 == '-') || op2 == '%')
+        if ((op1 == '*' || op1 == '/' || op1 == '.' || op1 == ':') && (op2 == '+' || op2 == '-') || op2 == '%' || op2 == '!')
             return false;
         else
             return true;

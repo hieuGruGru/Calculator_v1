@@ -18,6 +18,8 @@ public class Execution {
                 return Operators.Exponential(a, b);
             case '%':
                 return Operators.Remainder(a, b);
+            case '!':
+                return Operators.Factorial(a);
         }
         return 0;
     }
