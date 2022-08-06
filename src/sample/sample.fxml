@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <GridPane layoutX="9.0" layoutY="306.0" prefHeight="326.0" prefWidth="583.0">
@@ -21,6 +20,7 @@
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -31,7 +31,7 @@
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="one" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="one" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="25.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="three" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="three" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="25.0" />
                </font>
@@ -56,17 +56,17 @@
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="two" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="two" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="seven" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="149.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="seven" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="149.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="exponential" mnemonicParsing="false" onAction="#handleButton" prefHeight="66.0" prefWidth="149.0" text="^" GridPane.columnIndex="1">
+            <Button fx:id="exponential" mnemonicParsing="false" onAction="#handleButton" prefHeight="66.0" prefWidth="149.0" text="^" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="25.0" />
                </font>
@@ -76,52 +76,72 @@
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="four" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="four" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="answer" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="Ans" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="mod" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="mod" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="\%" GridPane.columnIndex="2">
+            <Button fx:id="eight" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="eight" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="five" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="five" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="factorial" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="!" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="factorial" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="!" GridPane.columnIndex="3">
+            <Button fx:id="nine" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="9" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="nine" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="9" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="six" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="6" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="six" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="zero" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="zero" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button fx:id="pi" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="π" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="pi" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="π" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="Rparenthesis" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text=")" GridPane.columnIndex="3">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="Lparenthesis" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="(" GridPane.columnIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="squareRoot" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="√" GridPane.columnIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="semicolon" mnemonicParsing="false" onAction="#handleButton" prefHeight="73.0" prefWidth="150.0" text="," GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="answer" mnemonicParsing="false" onAction="#handleButton" prefHeight="65.0" prefWidth="156.0" text="Ans" GridPane.rowIndex="5">
                <font>
                   <Font size="25.0" />
                </font>
@@ -143,7 +163,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="clearSrceen" layoutX="502.0" layoutY="99.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="52.0" prefWidth="84.0" text="SHIFT">
+      <Button fx:id="shift" layoutX="502.0" layoutY="99.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="52.0" prefWidth="84.0" text="SHIFT">
          <font>
             <Font size="20.0" />
          </font>
@@ -153,7 +173,7 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <Button fx:id="clearSrceen2" layoutX="402.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="38.0" prefWidth="77.0" text="AC">
+      <Button fx:id="clearSrceen" layoutX="402.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="38.0" prefWidth="77.0" text="AC">
          <font>
             <Font size="25.0" />
          </font>

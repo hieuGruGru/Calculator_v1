@@ -20,6 +20,8 @@ public class Execution {
                 return Operators.Remainder(a, b);
             case '!':
                 return Operators.Factorial(a);
+            case '√':
+                return Operators.SquareRoot(a);
         }
         return 0;
     }

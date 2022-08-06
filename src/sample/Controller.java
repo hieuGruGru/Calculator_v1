@@ -62,6 +62,12 @@ public class Controller implements Initializable {
     Button eight;
     @FXML
     Button nine;
+    @FXML
+    Button Lparenthesis;
+    @FXML
+    Button Rparenthesis;
+    @FXML
+    Button squareRoot;
 
     public double res;
 
@@ -111,6 +117,12 @@ public class Controller implements Initializable {
         if ( event.getSource() == nine) {
             expressionDisplay.setText(expressionDisplay.getText() + "9");
         }
+        if ( event.getSource() == Lparenthesis) {
+            expressionDisplay.setText(expressionDisplay.getText() + "(");
+        }
+        if ( event.getSource() == Rparenthesis) {
+            expressionDisplay.setText(expressionDisplay.getText() + ")");
+        }
         if ( event.getSource() == addition) {
             expressionDisplay.setText(expressionDisplay.getText() + "+");
         }
@@ -132,13 +144,20 @@ public class Controller implements Initializable {
         if ( event.getSource() == factorial) {
             expressionDisplay.setText(expressionDisplay.getText() + "!");
         }
+        if ( event.getSource() == squareRoot) {
+            expressionDisplay.setText(expressionDisplay.getText() + "√");
+        }
         if ( event.getSource() == result) {
-            resultDisplay.setText(String.valueOf(EvaluationEpression.evaluation(expressionDisplay.getText())));
-            res = EvaluationEpression.evaluation(expressionDisplay.getText());
+            if (expressionDisplay.getText() == "Ans") {
+                resultDisplay.setText(String.valueOf(res));
+            } else {
+                resultDisplay.setText(String.valueOf(EvaluationEpression.evaluation(expressionDisplay.getText())));
+                res = EvaluationEpression.evaluation(expressionDisplay.getText());
+            }
+
         }
         if ( event.getSource() == answer) {
             expressionDisplay.setText("Ans");
-            resultDisplay.setText(String.valueOf(res));
         }
 
     }
