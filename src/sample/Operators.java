@@ -28,16 +28,13 @@ public class Operators {
     public static double Factorial (double a) {
         return 1;
     }
-    public static double SquareRoot (double a) {
-        return Math.pow(a, 0.5);
-    }
+
 
     public static boolean isOperator (char a) {
         if(a == '+' || a == '-'  ||
            a == '*' || a == '.'  ||
            a == '/' || a == ':'  ||
-           a == '^' || a == '%'  ||
-           a == '√' ){
+           a == '^' || a == '%'  ){
             return true;
         }
         else {
@@ -49,7 +46,7 @@ public class Operators {
             return false;
         if (op1 == '^')
             return false;
-        if ((op1 == '*' || op1 == '/' || op1 == '.' || op1 == ':') && (op2 == '+' || op2 == '-') || op2 == '%' || op2 == '!' || op2 == '√')
+        if ((op1 == '*' || op1 == '/' || op1 == ':') && (op2 == '+' || op2 == '-' || op2 == '%' || op2 == '!'))
             return false;
         else
             return true;

@@ -67,7 +67,7 @@ public class Controller implements Initializable {
     @FXML
     Button Rparenthesis;
     @FXML
-    Button squareRoot;
+    Button decimalPoint;
 
     public double res;
 
@@ -80,13 +80,7 @@ public class Controller implements Initializable {
 
 
     public void handleButton (ActionEvent event) {
-        if ( event.getSource() == clearSrceen) {
-            expressionDisplay.setText("");
-            resultDisplay.setText("");
-        }
-        if ( event.getSource() == delete) {
-            expressionDisplay.setText((expressionDisplay.getText()).substring(0,(expressionDisplay.getText()).length() -1 ));
-        }
+
         if ( event.getSource() == zero) {
             expressionDisplay.setText(expressionDisplay.getText() + "0");
         }
@@ -123,6 +117,9 @@ public class Controller implements Initializable {
         if ( event.getSource() == Rparenthesis) {
             expressionDisplay.setText(expressionDisplay.getText() + ")");
         }
+        if ( event.getSource() == decimalPoint){
+            expressionDisplay.setText(expressionDisplay.getText() + ".");
+        }
         if ( event.getSource() == addition) {
             expressionDisplay.setText(expressionDisplay.getText() + "+");
         }
@@ -144,9 +141,6 @@ public class Controller implements Initializable {
         if ( event.getSource() == factorial) {
             expressionDisplay.setText(expressionDisplay.getText() + "!");
         }
-        if ( event.getSource() == squareRoot) {
-            expressionDisplay.setText(expressionDisplay.getText() + "√");
-        }
         if ( event.getSource() == result) {
             if (expressionDisplay.getText() == "Ans") {
                 resultDisplay.setText(String.valueOf(res));
@@ -154,10 +148,16 @@ public class Controller implements Initializable {
                 resultDisplay.setText(String.valueOf(EvaluationEpression.evaluation(expressionDisplay.getText())));
                 res = EvaluationEpression.evaluation(expressionDisplay.getText());
             }
-
         }
         if ( event.getSource() == answer) {
             expressionDisplay.setText("Ans");
+        }
+        if ( event.getSource() == clearSrceen) {
+            expressionDisplay.setText("");
+            resultDisplay.setText("");
+        }
+        if ( event.getSource() == delete) {
+            expressionDisplay.setText((expressionDisplay.getText()).substring(0,(expressionDisplay.getText()).length() -1 ));
         }
 
     }

@@ -16,24 +16,22 @@ public class EvaluationEpression {
 
             if (tokens[i] >= '0' && tokens[i] <= '9') {
                 StringBuffer tempStr = new StringBuffer();
-                while (i < tokens.length &&
-                        tokens[i] >= '0' &&
-                        tokens[i] <= '9') {
+                while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9') {
                     tempStr.append(tokens[i++]);
                 }
                 valueStack.push((double) Integer.parseInt(tempStr.toString()));
                 i--;
-            }
+                }
 
             else if (tokens[i] == '(')
-                operatorStack.push(tokens[i]);
+                    operatorStack.push(tokens[i]);
 
-                // Closing brace encountered,
-                // solve entire brace
-            else if (tokens[i] == ')') {
-                while (operatorStack.peek() != '(') {
-                    double topElement = valueStack.pop();
-                    valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
+                    // Closing brace encountered,
+                    // solve entire brace
+                else if (tokens[i] == ')') {
+                    while (operatorStack.peek() != '(') {
+                        double topElement = valueStack.pop();
+                        valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
 
                 }
                 operatorStack.pop();
