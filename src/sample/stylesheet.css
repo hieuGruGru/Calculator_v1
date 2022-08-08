@@ -1,14 +1,21 @@
+.root{
+    -fx-background-color: #141313;
+    -fx-background-radius: 20;
+}
+
 .bodybg{
      -fx-background-color: linear-gradient(to bottom right, #038f7a, #043066);
+     -fx-background-radius: 20;
   }
-
 .textfield{
      -fx-background-color: #8bc1cc
 }
 
 .button1{
 -fx-background-color: #8bc1cc
+
 }
+
 .button1:hover{
 -fx-text-fill: whitesmoke;
 }
@@ -20,4 +27,6 @@
 .button2:hover{
 -fx-text-fill: whitesmoke;
 }
+
+
 

@@ -2,14 +2,19 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
-public class Controller implements Initializable {
 
+
+public class Controller {
+
+    @FXML private Pane titlePane;
+    private double x, y;
+    @FXML private ImageView minimize, close;
     @FXML
     TextField expressionDisplay ;
     @FXML
@@ -72,12 +77,19 @@ public class Controller implements Initializable {
     public double res;
 
     StringBuffer exStr = new StringBuffer(" ");
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void init(Stage stage) {
+        titlePane.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+        titlePane.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX()-x);
+            stage.setY(mouseEvent.getScreenY()-y);
+        });
 
+        close.setOnMouseClicked(mouseEvent -> stage.close());
+        minimize.setOnMouseClicked(mouseEvent -> stage.setIconified(true));
     }
-
-
 
     public void handleButton (ActionEvent event) {
 
