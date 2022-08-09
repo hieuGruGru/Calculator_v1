@@ -13,15 +13,15 @@ public class Operators {
         return a * b;
     }
 
-    public static double Division (double a, double b) {//incomplete
+    public static double Division (double a, double b) {
         return a / b;
     }
 
-    public static double Exponential (double a, double b) {//incomplete
+    public static double Exponential (double a, double b) {
         return Math.pow(a, b);
     }
 
-    public static double Remainder (double a, double b) {//incomplete
+    public static double Remainder (double a, double b) {
         return a % b;
     }
 

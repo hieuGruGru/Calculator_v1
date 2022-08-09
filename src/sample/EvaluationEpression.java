@@ -56,7 +56,6 @@ public class EvaluationEpression {
                                             double topElement = valueStack.pop();
                                             valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
                                         }
-
                                         operatorStack.push(tokens[i]);
                                     }
                                 }
