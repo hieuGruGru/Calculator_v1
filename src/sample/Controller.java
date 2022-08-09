@@ -93,6 +93,9 @@ public class Controller {
 
     public void handleButton (ActionEvent event) {
 
+        if( event.getSource() == pi) {
+            expressionDisplay.setText(expressionDisplay.getText() + "π");
+        }
         if ( event.getSource() == zero) {
             expressionDisplay.setText(expressionDisplay.getText() + "0");
         }
