@@ -154,7 +154,7 @@ public class Controller {
             expressionDisplay.setText(expressionDisplay.getText() + "%");
         }
         if ( event.getSource() == factorial) {
-            expressionDisplay.setText(expressionDisplay.getText() + "!");
+            expressionDisplay.setText(expressionDisplay.getText() + "!1");
         }
         if ( event.getSource() == result) {
             if (expressionDisplay.getText() == "Ans") {

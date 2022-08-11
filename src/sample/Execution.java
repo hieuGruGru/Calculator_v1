@@ -18,7 +18,7 @@ public class Execution {
             case '%':
                 return Operators.Remainder(a, b);
             case '!':
-                return Operators.Factorial(a);
+                return Operators.Factorial(a,b);
         }
         return 0;
     }

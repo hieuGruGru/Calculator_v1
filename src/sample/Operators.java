@@ -25,8 +25,12 @@ public class Operators {
         return a % b;
     }
 
-    public static double Factorial (double a) {
-        return 1;
+    public static double Factorial (double a, double b) {
+        if (a == 0 || a == 1) {
+            return 1;
+        } else {
+            return a*Factorial(a - 1,1);
+        }
     }
 
 
@@ -34,7 +38,8 @@ public class Operators {
         if(a == '+' || a == '-'  ||
            a == '*' || a == '.'  ||
            a == '/' || a == ':'  ||
-           a == '^' || a == '%'  ){
+           a == '^' || a == '%'  ||
+           a == '!'){
             return true;
         }
         else {
