@@ -15,10 +15,10 @@ public class Count {
         this.count = count;
     }
 
-
     public void increase() {
         this.count ++;
     }
+
     public void decrease() {
         while (this.count > 0) {
             this.count --;

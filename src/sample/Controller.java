@@ -7,12 +7,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 
-
 public class Controller {
-
     @FXML
     private Pane titlePane;
     @FXML
@@ -82,7 +79,7 @@ public class Controller {
     @FXML
     private Button recentResultDown;
     @FXML
-    private Button editExpressionLeff;
+    private Button editExpressionLeft;
     @FXML
     private Button editExpressionRight;
 
@@ -104,7 +101,6 @@ public class Controller {
             stage.setX(mouseEvent.getScreenX()-x);
             stage.setY(mouseEvent.getScreenY()-y);
         });
-
         close.setOnMouseClicked(mouseEvent -> stage.close());
         minimize.setOnMouseClicked(mouseEvent -> stage.setIconified(true));
     }
@@ -218,19 +214,22 @@ public class Controller {
             expressionDisplay.setText(epxList.get(count2.getCount()));
             resultDisplay.setText((resArray[count2.getCount()]).toString());
             count2.decrease();
-
         }
         if ( event.getSource() == recentResultDown) {
             count2.increase();
             expressionDisplay.setText(epxList.get(count2.getCount()));
             resultDisplay.setText((resArray[count2.getCount()]).toString());
         }
-        if ( event.getSource() == editExpressionLeff) {
-
+        /*
+        if ( event.getSource() == editExpressionLeft) {
         }
+        if ( event.getSource() == editExpressionRight) {
+        }
+        */
+
         if ( event.getSource() == result) {
-            resultDisplay.setText(String.valueOf(IOHandle.evaluation(expressionToCalculate.toString())));
-            res = IOHandle.evaluation(expressionToCalculate.toString());
+            resultDisplay.setText(String.valueOf(ExpressionParser.parser(expressionToCalculate.toString())));
+            res = ExpressionParser.parser(expressionToCalculate.toString());
             recentCalculation(count1.getCount(), res, expressionDisplay.getText(), epxList, resArray);
             Counting(count1,count2);
         }
@@ -258,5 +257,6 @@ public class Controller {
             count2.setCount(9);
         }
     }
+
 }
 

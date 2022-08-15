@@ -67,6 +67,7 @@ public class Execution {
             throw new UnsupportedOperationException("Khoan đã ... Nhập cái toán tử gì vậy ba");
         }
     }
+
     public static boolean hasPrecedence (char op1, char op2) {//trả về true nếu op2 ưu tiên hơn op1
         if (op2 == '(' || op2 == ')')
             return false;
@@ -77,4 +78,5 @@ public class Execution {
         else
             return true;
     }
+
 }

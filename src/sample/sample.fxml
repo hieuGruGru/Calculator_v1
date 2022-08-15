@@ -230,7 +230,7 @@
                   </Button>
                </children>
             </GridPane>
-            <Button fx:id="editExpressionLeff" layoutX="229.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇦">
+            <Button fx:id="editExpressionLeft" layoutX="229.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇦">
                <font>
                   <Font size="20.0" />
                </font>
