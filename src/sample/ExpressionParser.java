@@ -5,18 +5,12 @@ import java.util.Stack;
 public class ExpressionParser {
     private static final double PI = 3.1415926535897;
 
-    public static double parser(StringBuilder expression) {
+    protected static double parser(StringBuilder expression) {
         char[] tokens = expression.toString().toCharArray();
         Stack<Double> valueStack = new Stack<Double>();
         Stack<Character> operatorStack = new Stack<Character>();
         double numBPoint = 0;
         double numAPoint = 0;
-        /*
-        for (int i = 0; i < tokens.length; i++) {
-            if (tokens[i] == '@') {
-            }
-        }
-        */
 
         for (int i = 0; i < tokens.length; i++) {
             if (tokens[i] == ' ')
@@ -80,16 +74,6 @@ public class ExpressionParser {
             valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
         }
         return valueStack.pop();
-    }
-
-    public static StringBuilder editExpression (StringBuilder exp) {
-        for (int i = 0; i < exp.length(); i++) {
-            if (exp.charAt(i) == '√') {
-                exp.delete(i, i + 1);
-                exp.insert(i + 1, "^0.5");
-            }
-        }
-        return exp;
     }
 
 }

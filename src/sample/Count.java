@@ -16,11 +16,13 @@ public class Count {
     }
 
     public void increase() {
-        this.count ++;
+        if (this.count < 10) {
+            this.count ++;
+        }
     }
 
     public void decrease() {
-        while (this.count > 0) {
+        if (this.count > 0) {
             this.count --;
         }
     }
