@@ -3,9 +3,10 @@ package sample;
 import java.util.Stack;
 
 public class ExpressionParser {
-    public static double parser(String expression) {
-        char[] tokens = expression.toCharArray();
-        final double PI = 3.1415926535897;
+    private static final double PI = 3.1415926535897;
+
+    public static double parser(StringBuilder expression) {
+        char[] tokens = expression.toString().toCharArray();
         Stack<Double> valueStack = new Stack<Double>();
         Stack<Character> operatorStack = new Stack<Character>();
         double numBPoint = 0;
@@ -25,7 +26,7 @@ public class ExpressionParser {
             } else {
                 if (tokens[i] >= '0' && tokens[i] <= '9') {
                     //Nếu kí tự là số, thêm vào Value Stack
-                    StringBuffer tempStr = new StringBuffer();
+                    StringBuilder tempStr = new StringBuilder();
                     while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9') {
                         //Xử lí trường hợp số có nhiều chữ số
                         tempStr.append(tokens[i++]);
@@ -35,7 +36,7 @@ public class ExpressionParser {
                     i--;
                 } else {
                     if (tokens[i] == '.') {//Xử lí trường hợp số thập phân
-                        StringBuffer tempStr = new StringBuffer();
+                        StringBuilder tempStr = new StringBuilder();
                         int n = i + 1;
                         while (n < tokens.length && tokens[n] >= '0' && tokens[n] <= '9') {
                             //Xử lí trường hợp có nhiều chữ số sau dấu phẩy
@@ -44,7 +45,7 @@ public class ExpressionParser {
                         n--;
                         i = n;
                         numAPoint = Double.parseDouble(tempStr.toString());
-                        numAPoint = numAPoint/(Math.pow(10, (tempStr.toString().length())));
+                        numAPoint = numAPoint / (Math.pow(10, (tempStr.toString().length())));
                         valueStack.pop();
                         valueStack.push(numBPoint + numAPoint);
                     } else {
@@ -64,6 +65,9 @@ public class ExpressionParser {
                                         valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
                                     }
                                     operatorStack.push(tokens[i]);
+                                    if (tokens[i] == '√') {
+                                        valueStack.push((double) 1);
+                                    }
                                 }
                             }
                         }
@@ -76,6 +80,16 @@ public class ExpressionParser {
             valueStack.push(Execution.calculate(operatorStack.pop(), valueStack.pop(), topElement));
         }
         return valueStack.pop();
+    }
+
+    public static StringBuilder editExpression (StringBuilder exp) {
+        for (int i = 0; i < exp.length(); i++) {
+            if (exp.charAt(i) == '√') {
+                exp.delete(i, i + 1);
+                exp.insert(i + 1, "^0.5");
+            }
+        }
+        return exp;
     }
 
 }

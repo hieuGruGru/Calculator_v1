@@ -183,12 +183,12 @@ public class Controller {
             expressionDisplay.setText(expressionDisplay.getText() + "^");
             expressionToCalculate.append("^");
         }
-        /*
+
         if ( event.getSource() == squareRoot) {
             expressionDisplay.setText(expressionDisplay.getText() + "√");
-            expressionToCalculate.append("@");
+            expressionToCalculate.append("√");
         }
-        */
+
         if ( event.getSource() == mod) {
             expressionDisplay.setText(expressionDisplay.getText() + "%");
             expressionToCalculate.append("%");
@@ -228,8 +228,8 @@ public class Controller {
         */
 
         if ( event.getSource() == result) {
-            resultDisplay.setText(String.valueOf(ExpressionParser.parser(expressionToCalculate.toString())));
-            res = ExpressionParser.parser(expressionToCalculate.toString());
+            resultDisplay.setText(String.valueOf(ExpressionParser.parser(expressionToCalculate)));
+            res = ExpressionParser.parser(expressionToCalculate);
             recentCalculation(count1.getCount(), res, expressionDisplay.getText(), epxList, resArray);
             Counting(count1,count2);
         }

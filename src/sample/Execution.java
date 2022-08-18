@@ -1,7 +1,7 @@
 package sample;
 
 public class Execution {
-    public static double calculate (char op, double a, double b) {
+    protected static double calculate (char op, double a, double b) {
         switch (op){
             case '+':
                 return Addition(a, b);
@@ -15,6 +15,8 @@ public class Execution {
                 return Division(a, b);
             case '^':
                 return Exponential(a, b);
+            case '√':
+                return SquareRoot(a, b);
             case '%':
                 return Remainder(a, b);
             case '!':
@@ -22,31 +24,35 @@ public class Execution {
         }
         return 0;
     }
-    public static double Addition (double a, double b) {
+    private static double Addition (double a, double b) {
         return a + b;
     }
 
-    public static double Subtraction (double a, double b) {
+    private static double Subtraction (double a, double b) {
         return a - b;
     }
 
-    public static double Multiplication (double a, double b) {
+    private static double Multiplication (double a, double b) {
         return a * b;
     }
 
-    public static double Division (double a, double b) {
+    private static double Division (double a, double b) {
         return a / b;
     }
 
-    public static double Exponential (double a, double b) {
+    private static double Exponential (double a, double b) {
         return Math.pow(a, b);
     }
 
-    public static double Remainder (double a, double b) {
+    private static double SquareRoot (double a, double b) {
+        return Math.pow(b, 0.5);
+    }
+
+    private static double Remainder (double a, double b) {
         return a % b;
     }
 
-    public static double Factorial (double a, double b) {
+    private static double Factorial (double a, double b) {
         a = Math.round(a);
         if (a == 0 || a == 1) {
             return 1;
@@ -55,12 +61,13 @@ public class Execution {
         }
     }
 
-    public static boolean isOperator (char a) {
-        if(a == '+' || a == '-'  ||
-                a == '*' || a == '.'  ||
-                a == '/' || a == ':'  ||
-                a == '^' || a == '%'  ||
-                a == '!'){
+    protected static boolean isOperator (char a) {
+        if
+        (a == '+' || a == '-'  ||
+         a == '*' || a == '.'  ||
+         a == '/' || a == ':'  ||
+         a == '^' || a == '%'  ||
+         a == '!' || a == '√'  ){
             return true;
         }
         else {
@@ -68,10 +75,10 @@ public class Execution {
         }
     }
 
-    public static boolean hasPrecedence (char op1, char op2) {//trả về true nếu op2 ưu tiên hơn op1
+    protected static boolean hasPrecedence (char op1, char op2) {//trả về true nếu op2 ưu tiên hơn op1
         if (op2 == '(' || op2 == ')')
             return false;
-        if (op1 == '^')
+        if (op1 == '^' || op1 == '√')
             return false;
         if ((op1 == '*' || op1 == '/' || op1 == ':') && (op2 == '+' || op2 == '-' || op2 == '%' || op2 == '!'))
             return false;

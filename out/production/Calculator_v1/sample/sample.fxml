@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="610.0" styleClass="root" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="613.0" styleClass="root" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane layoutX="7.0" layoutY="49.0" prefHeight="691.0" prefWidth="595.0" styleClass="bodybg" stylesheets="@stylesheet.css">
+      <Pane layoutX="11.0" layoutY="48.0" prefHeight="691.0" prefWidth="591.0" styleClass="bodybg" stylesheets="@stylesheet.css">
          <children>
             <TextField fx:id="resultDisplay" alignment="TOP_RIGHT" layoutX="17.0" layoutY="94.0" prefHeight="70.0" prefWidth="553.0" styleClass="textfield" stylesheets="@stylesheet.css">
                <font>
@@ -230,7 +230,7 @@
                   </Button>
                </children>
             </GridPane>
-            <Button fx:id="editExpressionLeff" layoutX="229.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇦">
+            <Button fx:id="editExpressionLeft" layoutX="229.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇦">
                <font>
                   <Font size="20.0" />
                </font>
