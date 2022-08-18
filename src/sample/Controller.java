@@ -87,7 +87,7 @@ public class Controller {
     private double x, y;
     private StringBuilder expressionToCalculate = new StringBuilder();
 
-    ArrayList<String> epxList = new ArrayList<String>();
+    ArrayList<String> expList = new ArrayList<String>();
     ArrayList<Double> resList = new ArrayList<Double>();
     Count count1 = new Count(0);//Đối tượng có thuộc tính count để đếm số lần thực hiện phép tính
     Count count2 = new Count(0);//Đối tượng có thuộc tính count để đồng bộ index trong mảng kết quả gần đây
@@ -105,8 +105,17 @@ public class Controller {
         minimize.setOnMouseClicked(mouseEvent -> stage.setIconified(true));
     }
 
+    @FXML
     protected void handleButton (ActionEvent event) {
-
+        if (event.getSource() == start) {
+            expressionDisplay.setText("");
+            resultDisplay.setText("");
+            expressionToCalculate.delete(0, expressionToCalculate.length());
+            res = 0;
+            count1.setCount(0);
+            expList.removeAll(expList);
+            resList.removeAll(resList);
+        }
         if( event.getSource() == pi) {
             expressionDisplay.setText(expressionDisplay.getText() + "π");
             expressionToCalculate.append("π");
@@ -183,12 +192,10 @@ public class Controller {
             expressionDisplay.setText(expressionDisplay.getText() + "^");
             expressionToCalculate.append("^");
         }
-
         if ( event.getSource() == squareRoot) {
             expressionDisplay.setText(expressionDisplay.getText() + "√");
             expressionToCalculate.append("√");
         }
-
         if ( event.getSource() == mod) {
             expressionDisplay.setText(expressionDisplay.getText() + "%");
             expressionToCalculate.append("%");
@@ -212,15 +219,13 @@ public class Controller {
         }
         if ( event.getSource() == recentResultUp) {
             count2.decrease();
-            expressionDisplay.setText(epxList.get(count2.getCount()));
+            expressionDisplay.setText(expList.get(count2.getCount()));
             resultDisplay.setText((resList.get(count2.getCount())).toString());
-
-
         }
         if ( event.getSource() == recentResultDown) {
             count2.increase();
             if (count2.count < count1.count) {
-                expressionDisplay.setText(epxList.get(count2.getCount()));
+                expressionDisplay.setText(expList.get(count2.getCount()));
                 resultDisplay.setText((resList.get(count2.getCount())).toString());
             } else {
                 expressionDisplay.setText("Trống");
@@ -233,16 +238,15 @@ public class Controller {
         if ( event.getSource() == editExpressionRight) {
         }
         */
-
         if ( event.getSource() == result) {
             resultDisplay.setText(String.valueOf(ExpressionParser.parser(expressionToCalculate)));
             res = ExpressionParser.parser(expressionToCalculate);
             Counting(count1,count2);
-            recentCalculation(count1.getCount(), res, expressionDisplay.getText(), epxList, resList);
+            recentCalculation(count1.getCount(), res, expressionDisplay.getText(), expList, resList);
         }
     }
 
-    private static void recentCalculation(int count, double res, String expDisplay, ArrayList<String> expList, ArrayList<Double> resList) {
+    protected static void recentCalculation(int count, double res, String expDisplay, ArrayList<String> expList, ArrayList<Double> resList) {
         if ( count < 10) {
             resList.add(res);
             expList.add(expDisplay);
@@ -254,7 +258,11 @@ public class Controller {
         }
     }
 
-    private static void Counting (Count count1, Count count2) {
+    protected static void setText(String str1, String str2) {
+
+    }
+
+    protected static void Counting (Count count1, Count count2) {
         count1.increase();
         count2.setCount(count1.count);
         }

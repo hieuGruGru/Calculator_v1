@@ -15,7 +15,6 @@
 -fx-background-color: #8bc1cc
 
 }
-
 .button1:hover{
 -fx-text-fill: whitesmoke;
 }
@@ -23,7 +22,6 @@
 .button2{
 -fx-background-color: #8bc1cc
 }
-
 .button2:hover{
 -fx-text-fill: whitesmoke;
 }
