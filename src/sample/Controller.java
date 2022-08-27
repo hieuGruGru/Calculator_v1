@@ -258,10 +258,6 @@ public class Controller {
         }
     }
 
-    protected static void setText(String str1, String str2) {
-
-    }
-
     protected static void Counting (Count count1, Count count2) {
         count1.increase();
         count2.setCount(count1.count);

@@ -14,14 +14,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="613.0" styleClass="root" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane layoutX="11.0" layoutY="48.0" prefHeight="691.0" prefWidth="591.0" styleClass="bodybg" stylesheets="@stylesheet.css">
+      <Pane layoutX="10.0" layoutY="30.0" prefHeight="709.0" prefWidth="591.0" styleClass="bodybg" stylesheets="@stylesheet.css">
          <children>
-            <TextField fx:id="resultDisplay" alignment="TOP_RIGHT" layoutX="17.0" layoutY="94.0" prefHeight="70.0" prefWidth="553.0" styleClass="textfield" stylesheets="@stylesheet.css">
+            <TextField fx:id="resultDisplay" alignment="TOP_RIGHT" layoutX="12.0" layoutY="94.0" prefHeight="70.0" prefWidth="567.0" styleClass="textfield" stylesheets="@stylesheet.css">
                <font>
                   <Font size="25.0" />
                </font>
             </TextField>
-            <TextField fx:id="expressionDisplay" alignment="TOP_RIGHT" layoutX="17.0" layoutY="14.0" prefHeight="70.0" prefWidth="553.0" styleClass="textfield" stylesheets="@stylesheet.css">
+            <TextField fx:id="expressionDisplay" alignment="TOP_RIGHT" layoutX="12.0" layoutY="14.0" prefHeight="70.0" prefWidth="567.0" styleClass="textfield" stylesheets="@stylesheet.css">
                <font>
                   <Font size="25.0" />
                </font>
@@ -188,7 +188,7 @@
                   </Button>
                </children>
             </GridPane>
-            <GridPane layoutX="20.0" layoutY="242.0" prefHeight="30.0" prefWidth="156.0">
+            <GridPane layoutX="17.0" layoutY="242.0" prefHeight="30.0" prefWidth="156.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -230,22 +230,12 @@
                   </Button>
                </children>
             </GridPane>
-            <Button fx:id="editExpressionLeft" layoutX="229.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇦">
+            <Button fx:id="recentResultUp" layoutX="256.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="75.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇧">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="recentResultUp" layoutX="274.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇧">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="recentResultDown" layoutX="274.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇩">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="editExpressionRight" layoutX="320.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="40.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇨">
+            <Button fx:id="recentResultDown" layoutX="256.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="75.0" styleClass="button1" stylesheets="@stylesheet.css" text="⇩">
                <font>
                   <Font size="20.0" />
                </font>
@@ -254,22 +244,22 @@
       </Pane>
       <Pane fx:id="titlePane" layoutX="7.0" layoutY="8.0" prefHeight="43.0" prefWidth="602.0" stylesheets="@stylesheet.css">
          <children>
-            <ImageView fx:id="close" fitHeight="20.0" fitWidth="20.0" layoutX="576.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="close" fitHeight="20.0" fitWidth="20.0" layoutX="576.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/close.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="minimize" fitHeight="20.0" fitWidth="20.0" layoutX="546.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="minimize" fitHeight="20.0" fitWidth="20.0" layoutX="546.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/hide.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/like2.png" />
                </image>
             </ImageView>
-            <Label layoutX="36.0" layoutY="3.0" prefHeight="17.0" prefWidth="126.0" text="Calculatỏ" textFill="#f8f8f8">
+            <Label layoutX="36.0" layoutY="-3.0" prefHeight="17.0" prefWidth="126.0" text="Calculatỏ" textFill="#f8f8f8">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
