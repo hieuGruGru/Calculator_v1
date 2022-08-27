@@ -21,7 +21,7 @@ public class Controller {
     @FXML
     private Button clearScreen;
     @FXML
-    private Button start;
+    private Button ON;
     @FXML
     private Button delete;
     @FXML
@@ -107,7 +107,7 @@ public class Controller {
 
     @FXML
     protected void handleButton (ActionEvent event) {
-        if (event.getSource() == start) {
+        if (event.getSource() == ON) {
             expressionDisplay.setText("");
             resultDisplay.setText("");
             expressionToCalculate.delete(0, expressionToCalculate.length());
@@ -223,13 +223,13 @@ public class Controller {
             resultDisplay.setText((resList.get(count2.getCount())).toString());
         }
         if ( event.getSource() == recentResultDown) {
-            count2.increase();
-            if (count2.count < count1.count) {
+            if (count2.count < count1.count - 1) {
+                count2.increase();
                 expressionDisplay.setText(expList.get(count2.getCount()));
                 resultDisplay.setText((resList.get(count2.getCount())).toString());
             } else {
                 expressionDisplay.setText("Trống");
-                resultDisplay.setText(("Trống"));
+                resultDisplay.setText("Trống");
             }
         }
         /*
